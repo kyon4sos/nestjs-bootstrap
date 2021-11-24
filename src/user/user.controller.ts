@@ -12,6 +12,6 @@ export class UserController extends BaseController {
   @Get()
   async index(@Req() req: Request) {
     const user = this.getCurrentUser(req);
-    return this.ok({ user, name: 'user' });
+    return this.ok(user);
   }
 }
